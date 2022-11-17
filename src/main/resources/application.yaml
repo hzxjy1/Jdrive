@@ -1,11 +1,15 @@
 spring:
   datasource:
-#    username: hsp
-#    password: 123456
-    url: jdbc:sqlite:./.Jdrive/Jdrive.db
+    url: jdbc:sqlite:Jdrive.db
     driver-class-name: org.sqlite.JDBC
-#    initialization-mode: always
-#    continue-on-error: true
   sql:
     init:
-      schema-locations: classpath:schema.sql
+      schema-locations: classpath:sql/schema.sql
+      mode: always
+      continue-on-error: true
+
+#  jpa:
+#    hibernate:
+#      ddl-auto: none
+#    show-sql: true
+#    generate-ddl: true
