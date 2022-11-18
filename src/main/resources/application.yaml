@@ -1,1 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:sqlite:Jdrive.db
+    driver-class-name: org.sqlite.JDBC
+  sql:
+    init:
+      schema-locations: classpath:sql/schema.sql
+      mode: always
+      continue-on-error: true
 
+#  jpa:
+#    hibernate:
+#      ddl-auto: none
+#    show-sql: true
+#    generate-ddl: true
